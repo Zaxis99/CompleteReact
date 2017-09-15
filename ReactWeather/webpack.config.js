@@ -8,7 +8,14 @@ module.exports = {
     },
     resolve: {
         alias: {
+            About: path.resolve(__dirname, 'app/components/About.jsx'),
+            Examples: path.resolve(__dirname, 'app/components/Examples.jsx'),
             Main: path.resolve(__dirname, 'app/components/Main.jsx'),
+            Nav: path.resolve(__dirname, 'app/components/Nav.jsx'),
+            openWeatherMap: path.resolve(__dirname, 'app/api/openWeatherMap.jsx'),
+            Weather: path.resolve(__dirname, 'app/components/Weather.jsx'),
+            WeatherForm: path.resolve(__dirname, 'app/components/WeatherForm.jsx'),
+            WeatherMessage: path.resolve(__dirname, 'app/components/WeatherMessage.jsx')
         },
         extensions: ['.js', '.jsx']
     },
@@ -23,5 +30,6 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/
             }
         ]
-    }
+    },
+    devtool: 'cheap-module-source-map'
 };
